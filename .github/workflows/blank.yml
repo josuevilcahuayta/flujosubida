@@ -34,7 +34,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@
 
 
 
@@ -46,18 +46,18 @@ jobs:
 
         # Runs a single command using the runners shell
       - name: Datos Generales
-        run: echo “carrera de ingeniería de sistemas”
+        run: echo "carrera de ingeniería de sistemas"
+
 
 
         # Runs a set of commands using the runners shell
       - name: variables de entorno secretas
         run: |
-          echo usuario secreto es : ${{env.user}}
-          echo contraseña secreta es : ${{env.password}}
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
 
         # Runs a set of commands using the runners shell
       - name: variables abiertas
         run: |
-          echo usuario secreto es : ${{env.user}}
-          echo contraseña secreta es : ${{env.password}}
+          echo Variables abierta es : ${{vars.VERSION_DE_MI_PROYECTO}}
       
