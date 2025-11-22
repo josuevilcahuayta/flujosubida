@@ -54,7 +54,7 @@ jobs:
           echo usuario secreto es : ${{env.user}}
           echo contraseña secreta es : ${{env.password}}
 
-      - name: variables de entorno secretas
+      - name: variables variables abiertas
         run: |
           echo Variables publica: ${{vars.VERSION_DE_MI_PROYECTO}}
 
